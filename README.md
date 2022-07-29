@@ -1,2 +1,2 @@
-# coffee-machine
+# Coffee-Machine
 Jetbrains project
