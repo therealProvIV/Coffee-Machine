@@ -1,4 +1,3 @@
-let input = require('sync-input');
 let water1 = 400;
 let milk1 = 540;
 let beans1 = 120;
@@ -14,13 +13,13 @@ $${money1} of money
 `)
 };
 function fill () {
-    let wateradd = input("Write how many ml of water you want to add:");
+    let wateradd = prompt("Write how many ml of water you want to add:");
     water1 += Number(wateradd);
-    let milkadd = input("Write how many ml of milk you want to add:");
+    let milkadd = prompt("Write how many ml of milk you want to add:");
     milk1 += Number(milkadd);
-    let beansadd = input("Write how many grams of coffee beans you want to add:");
+    let beansadd = prompt("Write how many grams of coffee beans you want to add:");
     beans1 += Number(beansadd);
-    let cupsadd = input("Write how many disposable coffee cups you want to add:");
+    let cupsadd = prompt("Write how many disposable coffee cups you want to add:");
     cups1 += Number(cupsadd);
     console.log(`The coffee machine has:
 ${water1} ml of water
@@ -31,7 +30,7 @@ $${money1} of money
 `);
 };
 function buy () {
-    let purchase = input("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back -- to main menu");
+    let purchase = prompt("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back -- to main menu");
     switch (purchase) {
       case "1":
         if (water1 >= 250) {
@@ -114,7 +113,7 @@ ${cups1} disposable cups
 $0 of money`);
 money1 = 0;
 };
-while ((answer = input("Write action (buy, fill, take, remaining, exit):")) !== "exit") {
+while ((answer = prompt("Write action (buy, fill, take, remaining, exit):")) !== "exit") {
 switch (answer) {
   case "fill":
     fill();
